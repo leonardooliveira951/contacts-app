@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    <link href="{{ asset('css/custom-style.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+{% if error is defined %}
+    <div class="alert alert-danger">{{ error.messageData }}</div>
+{% endif %}
+ <div class="text-center">
+    <h1 class="h4 text-gray-900 mb-4">Create an account!</h1>
+</div>
+<div class="new-form">
+    <form name="register_form" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control form-control-user" id="register_form_name" name="register_form[name]" required="required" maxlength="180" placeholder="Name"/>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-control-user" id="register_form_email" name="register_form[email]" required="required" maxlength="180" placeholder="Email"/>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control form-control-user" id="register_form_plainPassword" name="register_form[plainPassword]" required="required" autocomplete="new-password" placeholder="Password"/>
+        </div>
+
+        <div class="form-group">
+            <input type="hidden" name="register_form[_token]" value="{{ csrf_token('register_form') }}">
+        </div>
+        <div class="create-buttons">
+            <button class="btn btn-primary btn-user" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+{% endblock %}

@@ -1,0 +1,40 @@
+version: "3.3"
+
+services:
+  php:
+    build:
+      context: '.'
+      dockerfile: './docker/Dockerfile'
+    container_name: 'contacts-app'
+    volumes:
+      - ./:/var/www/localhost/htdocs
+    ports:
+      - '8060:80'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - default
+      - contacts
+  database:
+    image: mysql
+    ports:
+    - ${FORWARD_DB_PORT:-3306}:3306
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+    volumes:
+      - ./.docker-volumes/mysql/:/var/lib/mysql
+    networks:
+      - default
+      - contacts
+
+networks:
+  contacts:
+    name: contacts
+volumes:
+  contacts-db:
+    driver: local
