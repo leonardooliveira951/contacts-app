@@ -22,4 +22,4 @@ https://github.com/StartBootstrap/startbootstrap-sb-admin-2
 ## Testing
 
 - To run all tests, run: `make docker-test`
-- To run specific test using --filter flag, run: `docker-test-filter filter=testName`
+- To run specific test using --filter flag, run: `make docker-test-filter filter=testName`
