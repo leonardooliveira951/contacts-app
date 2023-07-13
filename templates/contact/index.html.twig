@@ -3,37 +3,53 @@
 {% block title %}Contact index{% endblock %}
 
 {% block body %}
-    <h1>Contact index</h1>
+    <h1>Contact list</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Main_phone</th>
-                <th>Email</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for contact in contacts %}
-            <tr>
-                <td>{{ contact.id }}</td>
-                <td>{{ contact.name }}</td>
-                <td>{{ contact.mainPhone }}</td>
-                <td>{{ contact.email }}</td>
-                <td>
-                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
-                    <a href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <div class="container-fluid">
+        <!-- DataTales Example -->
+        {# <div class="card shadow mb-4"> #}
+            {# <div class=""> #}
+                <div class="">
+                <div class="text-right my-3">
+                <a class="btn btn-primary text-white" href="{{ path('app_contact_new') }}">
+                    new contact
+                </a>
+                </div>
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Main phone</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for contact in contacts %}
+                            <tr>
+                                <td>{{ contact.id }}</td>
+                                <td>{{ contact.name }}</td>
+                                <td>{{ contact.email }}</td>
+                                <td >{{ contact.mainPhone }}</td>
+                                <td class="table-actions">
+                                <div class="text-center">
+                                    <a class="btn btn-primary btn-sm" href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
+                                    <a class="btn btn-secondary btn-sm" href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>
+                                </div>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr class="text-center">
+                                <td colspan="6">no content</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {# </div> #}
+        {# </div> #}
 
-    <a href="{{ path('app_contact_new') }}">Create new</a>
+
+
 {% endblock %}

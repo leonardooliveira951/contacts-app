@@ -75,7 +75,7 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="app_contact_delete", methods={"POST"})
+     * @Route("/{id}", name="app_contact_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Contact $contact, ContactRepository $contactRepository): Response
     {
