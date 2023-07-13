@@ -15,4 +15,7 @@ docker-composer-install:
 	docker exec -t ${CONTAINER_NAME} composer install
 
 docker-test:
-	docker exec -t ${CONTAINER_NAME} composer tests
+	docker exec -t ${CONTAINER_NAME} php bin/phpunit`
+
+docker-test-filter:
+	docker exec -t ${CONTAINER_NAME} php bin/phpunit --filter=$(filter)

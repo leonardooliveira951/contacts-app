@@ -1245,16 +1245,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "3.2.x-dev",
+            "version": "3.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "63fee8c33bef740db6730eb2a750cd3da6495603"
+                "reference": "5ce878582dbc5b4f868d23c31706fed06b0c9a86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/63fee8c33bef740db6730eb2a750cd3da6495603",
-                "reference": "63fee8c33bef740db6730eb2a750cd3da6495603",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/5ce878582dbc5b4f868d23c31706fed06b0c9a86",
+                "reference": "5ce878582dbc5b4f868d23c31706fed06b0c9a86",
                 "shasum": ""
             },
             "require": {
@@ -1276,7 +1276,6 @@
                 "symfony/cache": "^4.4 || ^5.4 || ^6.0",
                 "vimeo/psalm": "4.30.0 || 5.3.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1324,7 +1323,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/3.2.0"
+                "source": "https://github.com/doctrine/persistence/tree/3.3.x"
             },
             "funding": [
                 {
@@ -1340,7 +1339,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-17T18:32:04+00:00"
+            "time": "2023-07-12T06:52:27+00:00"
         },
         {
             "name": "doctrine/sql-formatter",
@@ -9426,12 +9425,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "4af1b7a5c4a3bb13557344885123e1288e80e76b"
+                "reference": "ada57ff7382edb5ad118170895d43b49ec14494e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/4af1b7a5c4a3bb13557344885123e1288e80e76b",
-                "reference": "4af1b7a5c4a3bb13557344885123e1288e80e76b",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/ada57ff7382edb5ad118170895d43b49ec14494e",
+                "reference": "ada57ff7382edb5ad118170895d43b49ec14494e",
                 "shasum": ""
             },
             "require": {
@@ -9499,7 +9498,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-24T11:52:37+00:00"
+            "time": "2023-07-12T16:01:16+00:00"
         },
         {
             "name": "symfony/web-profiler-bundle",
