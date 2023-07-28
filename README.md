@@ -7,8 +7,6 @@ Contacts CRUD using Symfony.
 
 ## Features
 
-List the key features or functionalities of your project.
-
 - Register and login
 - Contacts CRUD, with Twig templates and using SB Admin theme
 https://github.com/StartBootstrap/startbootstrap-sb-admin-2
